@@ -1,0 +1,619 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600&display=swap');
+ 
+:root{
+   --yellow:#00ffc8;
+   ;
+   
+}
+
+
+
+*{
+   font-family: 'Comfortaa', cursive;
+   font-family: 'Montserrat', sans-serif;
+   font-family: 'Nunito', sans-serif;
+    margin: 0;padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+ }
+ 
+ *::selection{
+   background: var(--yellow);
+   color: #333;
+ }
+
+
+ html{
+   font-size: 62.5%;
+   overflow-x: hidden;
+ }
+
+
+ html::-webkit-scrollbar{
+   width: 1.4rem;
+  }
+
+  html::-webkit-scrollbar-track{
+   background: #222;
+   }
+
+
+   html::-webkit-scrollbar-thumb{
+      background:var(--yellow);
+      }
+      
+   body{
+      background:#111;
+      overflow-x: hidden;
+      padding-left: 35rem;
+
+   }
+
+   section{
+     min-height: 100vh;
+     padding: 1rem;
+   }
+
+   .btn{
+      padding: .5rem 1rem;
+      background: #333;
+      color: #fff;
+      cursor: pointer;
+      margin-top: 1rem;
+      font-size: 1.8rem;
+      border-radius: 5rem;
+      
+   }
+
+   .btn i{
+        padding: 0 .5rem;
+        font-size: 1.8rem;
+   }
+
+   .btn:hover{
+      background: var(--yellow);
+   }
+
+   .heading{
+      text-align: center;
+      margin:0 6rem;
+      font-size: 4rem;
+      padding: 1rem;
+      border-bottom: .1rem solid #fff4;
+      color:#fff;
+   }
+
+   .heading span{
+      color: var(--yellow);
+   }
+
+   .skills .heading span{
+      color: var(--yellow);
+      font-size: 4rem;
+   }
+
+
+   header{
+      position: fixed;
+      top:0; left:0;
+      z-index: 1000;
+      height: 100%;
+      width:35rem;
+      background: #1a1a1a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-flow: column;
+      text-align: center;
+   }
+  /*size of img to make it circle*/
+   header .welcome img{
+      height: 15rem;
+      width:15rem;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1rem;
+      border:.7rem solid var(--yellow);
+   }
+
+   header .welcome .name{
+      font-size: 3.5rem;
+      color:#fff;
+   }
+
+   header .welcome .Fullname{
+      font-size: 1.7rem;
+      color:#eee;
+   }
+
+   header .navbar{
+      width: 100%;
+   }
+
+   header .navbar ul{
+      list-style: none;
+      padding:1rem 3rem;
+    }
+   
+   header .navbar ul li a{
+      display: block;
+      padding: 1rem;
+      margin:1.5rem 0;
+      color: #fff;
+      background: #333;
+      font-size: 2rem;
+      border-radius: 5rem;
+   }
+
+   header .navbar ul li a:hover{
+      background: var(--yellow);
+   }
+  
+   
+   .container {
+      position: fixed;
+      top: 2rem; right: 2rem;
+      display: none;
+      cursor: pointer;
+      z-index: 1000;
+
+    }
+    
+    .bar1, .bar2, .bar3 {
+      width: 27.5px;
+      height: 4.5px;
+      background-color: var(--yellow);
+      margin: 6px 0;
+      transition: 0.4s;
+    }
+    
+    .change .bar1 {
+      -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+      transform: rotate(-45deg) translate(-9px, 6px);
+    }
+    
+    .change .bar2 {opacity: 0;}
+    
+    .change .bar3 {
+      -webkit-transform: rotate(45deg) translate(-8px, -8px);
+      transform: rotate(45deg) translate(-8px, -8px);
+    }
+
+   /*The responisve area*/
+
+   @media (max-width:1200px){
+      html{
+         font-size: 55%;
+      }
+      #welcome{
+         padding: 1rem 4rem;
+      }
+   }
+  
+   @media (max-width:991px){
+      header{
+         left: -120%;
+      }
+      .container{
+         display: block;
+      }
+      header.toggle{
+         left: 0%;
+      }
+
+      body{
+         padding: 0;
+      }
+   }
+
+   @media (max-width:768px){
+      html{
+         font-size: 50%;
+      }
+   }
+
+
+   @media (max-width:415px){
+      header{
+         width: 100vw;
+      }
+         .bar1, .bar2, .bar3 {
+            background-color: var();
+          }  
+       #home{
+         padding: 1rem 4rem;
+       }
+      .heading{
+         margin: 0 3rem;
+      }    
+
+      .about .row .counter .box{
+         width:100%;
+      }
+      .education .box-container .box{
+         width: 100%;
+      }
+     
+   }
+
+.home{
+   display: flex;
+   justify-content: center;
+   flex-flow: column;
+   padding: 0 15rem;
+}
+
+.home h3{
+   font-size: 2.5rem;
+   color:#fff;
+}
+
+.home h1{
+   font-size: 5rem;
+   color:#fff;
+}
+   
+.home p{
+   font-size: 2rem;
+   color:#eee;
+}
+
+.home h1 span{
+   color: var(--yellow);
+}
+
+.about .row{
+   display:flex;
+   align-items: center;
+   justify-content: center;
+   flex-wrap: wrap;
+   padding: 1rem 0;
+}
+
+.about .row .info {
+   flex: 1 1 48rem;
+   padding: 2rem 1rem;
+   padding-left: 6rem;
+}
+
+.about .row .counter {
+   flex: 9 2 35rem;
+   display:flex;
+   align-items: center;
+   justify-content: center;
+   flex-wrap: wrap;
+   padding: 1rem 0;
+}
+
+.about .row .info h3{
+   font-size: 2rem;
+   color: var(--yellow);
+   padding: 1rem 0;
+   font-weight: normal;
+}
+
+.about .row .info h3 span{
+   color: #eee;
+   padding: 0 .5rem;
+}
+
+.about .row .counter .box{
+    width: 30 rem;
+    background: #333;
+    text-align:center;
+    padding:2rem;
+    margin:2rem;
+}
+
+
+.about .row .counter .box span{
+   font-size: 4rem;
+   color: var(--yellow);
+}
+
+.about .row .counter .box h3{
+   font-size: 2rem;
+   color: #fff;
+}
+
+.education .box-container{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   flex-wrap: wrap;
+   padding: 1rem 0;
+   padding-left: 3rem;
+}
+
+.education .box-container .box{
+   width: 27rem;
+   margin:4rem 1rem;
+   padding-left: 4rem;
+   border-left: .2rem solid #fff;
+   position: relative;
+}
+
+.education .box-container .box span{
+   font-size: 1.2rem;
+   background: #222;
+   color: #fff;
+   border-radius: 5rem;
+   padding: .5rem 2.5rem;
+}
+
+.education .box-container .box{
+   width:150%;
+}
+
+.education .box-container .box h3{
+   font-size: 2rem;
+   color: #fff;
+   padding-top: 1.5rem;
+}
+
+.education .box-container .box p{
+   font-size: 1.4rem;
+   color: #eee;
+   padding: 1rem 0;
+}
+
+.education .box-container .box i{
+   position: absolute;
+   top: -1.5rem; left:-2rem;
+   height:5rem;
+   width: 5rem;
+   border-radius: 50%;
+   line-height: 5rem;
+   text-align: center;
+   font-size: 2rem;
+   color:#fff;
+   background: var(--yellow);
+}
+/*pourcentage*/
+
+.skills .container
+{
+  position:relative;
+  width:900px;
+  justify-content:space-around;
+   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 1rem 0;
+  padding-left: 3rem;
+}
+
+
+
+
+
+
+.skills {
+   width: 100%;
+}
+
+
+.contact{
+   width: 100%;
+}
+
+  
+ 
+
+
+/*******Skills********/
+.progress1 {
+   background: rgba(255,255,255,0.1);
+   justify-content: flex-start;
+   border-radius: 100px;
+   align-items: center;
+   position: relative;
+   padding: 0 5px;
+   display: flex;
+   height: 40px;
+   width: 350px;
+ }
+ 
+ .progress1 .progress-value {
+   animation: load 3s normal forwards;
+   box-shadow: 0 10px 40px -10px var(--yellow);
+   border-radius: 100px;
+   background: var(--yellow);
+   height: 30px;
+   width: 70%;
+ }
+
+ .progress2 {
+   background: rgba(255,255,255,0.1);
+   justify-content: flex-start;
+   border-radius: 100px;
+   align-items: center;
+   position: relative;
+   padding: 0 5px;
+   display: flex;
+   height: 40px;
+   width: 350px;
+ }
+ 
+ .progress2 .progress-value {
+   animation: load 3s normal forwards;
+   box-shadow: 0 10px 40px -10px var(--yellow);
+   border-radius: 100px;
+   background: var(--yellow);
+   height: 30px;
+   width: 60%;
+ }
+
+ .progress3 {
+   background: rgba(255,255,255,0.1);
+   justify-content: flex-start;
+   border-radius: 100px;
+   align-items: center;
+   position: relative;
+   padding: 0 5px;
+   display: flex;
+   height: 40px;
+   width: 350px;
+ }
+ 
+ .progress3 .progress-value {
+   animation: load 3s normal forwards;
+   box-shadow: 0 10px 40px -10px var(--yellow);
+   border-radius: 100px;
+   background: var(--yellow);
+   height: 30px;
+   width: 50%;
+ }
+
+
+ .progress4 {
+   background: rgba(255,255,255,0.1);
+   justify-content: flex-start;
+   border-radius: 100px;
+   align-items: center;
+   position: relative;
+   padding: 0 5px;
+   display: flex;
+   height: 40px;
+   width: 350px;
+ }
+ 
+ .progress4 .progress-value {
+   animation: load 3s normal forwards;
+   box-shadow: 0 10px 40px -10px var(--yellow);
+   border-radius: 100px;
+   background: var(--yellow);
+   height: 30px;
+   width: 50%;
+ }
+
+ .skills .box-container1{
+   display: flex;
+   justify-content: space-between;
+   flex-wrap: wrap;
+}
+
+.skills span{
+   color: #eee;
+   font-size: 1.5rem;
+   margin-left: 10px;
+}
+
+
+
+.progress5 {
+   background: rgba(255,255,255,0.1);
+   justify-content: flex-start;
+   border-radius: 100px;
+   align-items: center;
+   position: relative;
+   padding: 0 5px;
+   display: flex;
+   height: 40px;
+   width: 350px;
+ }
+ 
+ .progress5 .progress-value {
+   animation: load 3s normal forwards;
+   box-shadow: 0 10px 40px -10px var(--yellow);
+   border-radius: 100px;
+   background: var(--yellow);
+   height: 30px;
+   width: 10%;
+ }
+
+ .progress6 {
+   background: rgba(255,255,255,0.1);
+   justify-content: flex-start;
+   border-radius: 100px;
+   align-items: center;
+   position: relative;
+   padding: 0 5px;
+   display: flex;
+   height: 40px;
+   width: 350px;
+ }
+ 
+ .progress6 .progress-value {
+   animation: load 3s normal forwards;
+   box-shadow: 0 10px 40px -10px var(--yellow);
+   border-radius: 100px;
+   background: var(--yellow);
+   height: 30px;
+   width: 23%;
+ }
+
+ .contact .row{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-wrap: wrap;
+ }
+
+ 
+ .contact .row .content{
+   flex: 1 1 30rem;
+   padding-bottom: 0;
+ }
+
+
+ .contact .row form{
+   flex: 1 1 45rem;
+   padding: 2rem;
+   margin: 2rem;
+   margin-bottom: 0;
+ }
+
+ .contact .row form .box{
+  padding: 1.5rem;
+  margin: 1rem 0;
+  background: #3333;
+  color: #fff;
+  text-transform: none;
+  font-size: 1.7rem;
+  width: 100%;
+  border-radius: 10px;
+ }
+
+ .contact .row form .message{
+   height: 15rem;
+   resize: none;
+ }
+
+ .contact .row .content .title{
+   text-transform: uppercase;
+   color: #fff;
+   font-size: 3rem;
+   padding-bottom: 2rem;
+   padding-left: 60px;
+ }
+
+ .contact .row .content .info h3{
+   display: flex;
+   align-items: center;
+   font-size: 2rem;
+   color:#eee;
+   padding: 1rem 0;
+   font-weight: normal;
+ }
+
+ .contact .row .content .info h3 i{
+   padding-right: 1rem;
+   color: var(--yellow);
+ }
+
+
+
+
+
+
+
+
+
+
+
+
